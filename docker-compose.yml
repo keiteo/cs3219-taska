@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: nginx-app
+    build: 
+      context: ./
+    ports:
+      - "80:80"
+    networks: 
+      - app 
+
+networks: 
+  app:
